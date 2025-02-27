@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙彩梦的个人介绍</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* 容器样式 */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 标题样式 */
+        h1 {
+            color: #007BFF;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* 段落样式 */
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 15px 0;
+            color: #555;
+        }
+
+        /* 高亮文本样式 */
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        /* 联系方式样式 */
+        .contact {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #555;
+            display: none; /* 默认隐藏 */
+        }
+
+        .contact a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #0056b3;
+        }
+
+        /* 按钮样式 */
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 社交图标样式 */
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #007BFF;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+    </style>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>孙彩梦</h1>
+        <p><span class="highlight">年龄：</span>20岁</p >
+        <p><span class="highlight">学校：</span>华北水利水电大学</p >
+        <p><span class="highlight">年级：</span>大二</p >
+        <p><span class="highlight">专业：</span>软件工程</p >
+        <!-- 联系方式 -->
+        <div class="contact" id="contact">
+            <span class="highlight">邮箱：</span>
+            2165218099@qq.com
+        </div>
+        <!-- 按钮 -->
+        <button class="button" id="contactButton">联系我</button>
+        <!-- 社交图标 -->
+        <div class="social-icons">
+            <i class="fab fa-weixin"></i>
+            <i class="fab fa-qq"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript 实现点击按钮显示邮箱
+        const contactButton = document.getElementById('contactButton');
+        const contactInfo = document.getElementById('contact');
+
+        contactButton.addEventListener('click', () => {
+            contactInfo.style.display = 'block'; // 显示联系方式
+            contactButton.style.display = 'none'; // 隐藏按钮
+        });
+    </script>
+</body>
+</html>
